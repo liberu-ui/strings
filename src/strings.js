@@ -1,3 +1,7 @@
+const diff = (first, second) => first.split('')
+    .filter((char, index) => char !== second.charAt(index))
+    .join('');
+
 const regEx = new RegExp(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g);
 
 const snake = string => string.match(regEx)
@@ -23,5 +27,5 @@ const lcwords = string => string.match(regEx)
     .join(' ');
 
 export {
-    snake, slug, pascal, camel, lcwords,
+    diff, snake, slug, pascal, camel, lcwords,
 };
