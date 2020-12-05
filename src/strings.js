@@ -24,7 +24,7 @@ const lcwords = string => string.match(regEx)
     .map(word => word.toLowerCase())
     .join(' ');
 
-const ucfirst = string.charAt(0).toUpperCase() + string.slice(1);
+const ucfirst = string => string.charAt(0).toUpperCase() + string.slice(1);
 
 export {
     diff, snake, slug, pascal, camel, lcfirst, lcwords, ucfirst,
