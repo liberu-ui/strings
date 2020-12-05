@@ -16,16 +16,16 @@ const pascal = string => string.match(regEx)
     .map(word => word.toUpperCase())
     .join('');
 
-const camel = string => {
-    string = pascal(string);
+const camel = string => lcfirst(pascal(string));
 
-    return string.charAt(0).toLowerCase() + string.slice(1);
-};
+const lcfirst = string => string.charAt(0).toLowerCase() + string.slice(1);
 
 const lcwords = string => string.match(regEx)
     .map(word => word.toLowerCase())
     .join(' ');
 
+const ucfirst = string.charAt(0).toUpperCase() + string.slice(1);
+
 export {
-    diff, snake, slug, pascal, camel, lcwords,
+    diff, snake, slug, pascal, camel, lcfirst, lcwords, ucfirst,
 };
