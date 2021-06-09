@@ -8,8 +8,8 @@ const snake = string => string.match(regEx)
     .map(word => word.toLowerCase())
     .join('_');
 
-const slug = (string, slug = '-') => string.match(regEx)
-    .map(word => word.toLowerCase())
+const slug = (string, slug = '-') => string.toLowerCase()
+    .match(regEx)
     .join(slug);
 
 const pascal = string => string.match(regEx)
