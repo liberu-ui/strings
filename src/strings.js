@@ -10,7 +10,7 @@ const snake = string => (string ?? '').match(regEx)
 
 const slug = (string, slug = '-') => (string ?? '').toLowerCase()
     .match(regEx)
-    .join(slug);
+    ?.join(slug);
 
 const pascal = string => (string ?? '').match(regEx)
     .map(word => word.toUpperCase())
