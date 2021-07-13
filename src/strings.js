@@ -4,27 +4,35 @@ const diff = (first, second) => (first ?? '').split('')
 
 const regEx = new RegExp(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g);
 
-const snake = string => (string ?? '').match(regEx)
-    .map(word => word.toLowerCase())
-    .join('_');
+const valid = string => string !== null
+    && typeof string !== undefined
+    && string !== '';
 
-const slug = (string, slug = '-') => (string ?? '').toLowerCase()
-    .match(regEx)
-    .join(slug);
+const snake = string => valid(string)
+    ? string.match(regEx)?.map(word => word.toLowerCase()).join('_')
+    : '';
 
-const pascal = string => (string ?? '').match(regEx)
-    .map(word => word.toUpperCase())
-    .join('');
+const slug = (string, slug = '-') => valid(string)
+    ? string.toLowerCase().match(regEx).join(slug)
+    : '';
+
+const pascal = string => valid(string)
+    ? string.match(regEx).map(word => word.toUpperCase()).join('')
+    : '';
 
 const camel = string => lcfirst(pascal(string));
 
-const lcfirst = string => (string ?? '').charAt(0).toLowerCase() + (string ?? '').slice(1);
+const lcfirst = string => valid(string)
+    ? string.charAt(0).toLowerCase() + string.slice(1)
+    : '';
 
-const lcwords = string => (string ?? '').match(regEx)
-    .map(word => word.toLowerCase())
-    .join(' ');
+const lcwords = string => valid(string)
+    ? string.match(regEx).map(word => word.toLowerCase()).join(' ')
+    : '';
 
-const ucfirst = string => (string ?? '').charAt(0).toUpperCase() + (string ?? '').slice(1);
+const ucfirst = string => valid(string)
+    ? string.charAt(0).toUpperCase() + string.slice(1)
+    : '';
 
 export {
     diff, snake, slug, pascal, camel, lcfirst, lcwords, ucfirst,
