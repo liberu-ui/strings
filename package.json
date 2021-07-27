@@ -1,6 +1,6 @@
 {
   "name": "@enso-ui/strings",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Strig helpers",
   "main": "src/strings.js",
   "scripts": {
