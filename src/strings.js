@@ -12,7 +12,7 @@ const snake = string => valid(string)
     ? string.match(regEx)?.map(word => word.toLowerCase()).join('_')
     : '';
 
-const slug = (string, slug = '-') => valid(string)
+const slug = (string, slug = '-') => valid(string) && string.match(regEx)
     ? string.toLowerCase().match(regEx).join(slug)
     : '';
 
