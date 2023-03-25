@@ -13,11 +13,11 @@ const snake = string => (valid(string)
     : '');
 
 const slug = (string, slug = '-') => (valid(string) && string.match(regEx)
-    ? string.toLowerCase().match(regEx).join(slug)
+    ? string.toLowerCase().match(regEx)?.join(slug)
     : '');
 
 const pascal = string => (valid(string)
-    ? string.match(regEx).map(word => word.toUpperCase()).join('')
+    ? string.match(regEx)?.map(word => word.toUpperCase()).join('')
     : '');
 
 const lcfirst = string => (valid(string)
@@ -25,7 +25,7 @@ const lcfirst = string => (valid(string)
     : '');
 
 const lcwords = string => (valid(string)
-    ? string.match(regEx).map(word => word.toLowerCase()).join(' ')
+    ? string.match(regEx)?.map(word => word.toLowerCase()).join(' ')
     : '');
 
 const ucfirst = string => (valid(string)
