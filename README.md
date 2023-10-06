@@ -1,10 +1,10 @@
 # Strings
 
-![npm license](https://img.shields.io/npm/l/@enso-ui/strings.svg) 
-![npm download](https://img.shields.io/npm/dm/@enso-ui/strings.svg) 
-![GitHub top language](https://img.shields.io/github/languages/top/enso-ui/strings.svg) 
-![GitHub issues](https://img.shields.io/github/issues/enso-ui/strings.svg) 
-![npm version](https://img.shields.io/npm/v/@enso-ui/strings.svg) 
+![npm license](https://img.shields.io/npm/l/@liberu-ui/strings.svg) 
+![npm download](https://img.shields.io/npm/dm/@liberu-ui/strings.svg) 
+![GitHub top language](https://img.shields.io/github/languages/top/liberu-ui/strings.svg) 
+![GitHub issues](https://img.shields.io/github/issues/liberu-ui/strings.svg) 
+![npm version](https://img.shields.io/npm/v/@liberu-ui/strings.svg) 
 
 Quickview
 
