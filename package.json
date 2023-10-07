@@ -2,7 +2,7 @@
   "name": "@liberu-ui/strings",
   "version": "2.0.12",
   "description": "Strig helpers",
-  "main": "src/strings.js",
+  "main": "src/strings.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
